@@ -1,0 +1,36 @@
+/**
+ * BODY
+ */
+
+body {
+    @include textRendering;
+    font-family: "Poppins", sans-serif;
+    background-color: $bg;
+    color: $black;
+    font-size: 20px;
+    line-height: 1.7;
+    overflow-x: hidden;
+    
+    @include small { padding: 40px; }
+    
+    @include large-up { padding: 80px; }
+
+    &::after {
+        content: '';
+        position: fixed;
+        top: 50%;
+        right: 0;
+        width: 50%;
+        padding-bottom: 50%;
+        border-radius: 100%;
+        transform: translate(50%,-50%);
+        background-color: $primary;
+        z-index: -1;
+        
+        @include small { display: none; }
+    }
+}
+
+::selection {
+    background-color: rgba($secondary, 0.5);
+}

@@ -1,0 +1,9 @@
+/**
+ * PARAGRAPH
+ */
+
+p { 
+    &:not(:last-child) { margin-bottom: 20px; }
+
+    & > b { font-weight: 600; }
+}

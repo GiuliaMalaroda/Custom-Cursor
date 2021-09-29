@@ -1,0 +1,28 @@
+/**
+ * EXTENDS
+ *
+ * index
+ * - typography
+ * - margins
+ * - paddings
+ */
+
+/**
+ * typography
+ */
+%bigFont {
+    font-weight: 800;
+    line-height: 1 !important;
+    @include small { font-size: 40px; } 
+    @include large { font-size: 50px; }
+    @include xlarge { font-size: 70px; }
+}
+
+%leadFont {
+    font-weight: 600;
+    line-height: 1 !important;
+
+    @include small { font-size: 30px; } 
+    @include large { font-size: 50px; }
+    @include xlarge { font-size: 70px; }
+}

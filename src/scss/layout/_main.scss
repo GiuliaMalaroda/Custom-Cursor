@@ -1,0 +1,11 @@
+/**
+ * MAIN
+ */
+
+.main {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    @include small { margin-bottom: 80px; }
+    @include large-up { margin-bottom: 80px * 3; }    
+}

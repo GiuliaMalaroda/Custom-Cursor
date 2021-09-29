@@ -1,0 +1,22 @@
+{
+  "name": "custom-cursor",
+  "version": "1.0.0",
+  "author": "Giulia Malaroda",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GiuliaMalaroda/Custom-Cursor"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel src/index.html --open",
+    "clean": "rm -rf dist/*",
+    "build:parcel": "parcel build src/index.html",
+    "build": "npm run clean && npm run build:parcel"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.0.0-rc.0",
+    "parcel": "^2.0.0-rc.0",
+    "gsap": "^3.8.0"
+  }
+}

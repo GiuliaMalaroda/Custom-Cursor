@@ -1,0 +1,45 @@
+/**
+ * APP
+ *
+ * version: 1.0.0
+ * last update: 29-09-2021
+ *
+ * index
+ * - abstract
+ * - vendors
+ * - base
+ * - layout
+ * - components
+ * - pages
+ * - themes
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400&display=swap');
+
+/**
+ * abstract
+ */
+@import 'abstract/variables';
+@import 'abstract/mixins';
+@import 'abstract/extends';
+
+/**
+ * base
+ */
+@import 'base/reset';
+
+/**
+ * layout
+ */
+@import 'layout/body';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/article';
+@import 'layout/footer';
+
+/**
+ * components
+ */
+@import 'components/paragraph';
+@import 'components/anchor';
+@import 'components/cursor';

@@ -1,0 +1,65 @@
+/**
+ * MIXINS
+ *
+ * index
+ * - textRendering
+ * - anyPointer, anyHover
+ * - small, large-up, large, xlarge
+ */
+
+/**
+ * textRendering
+ */
+@mixin textRendering {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/**
+ * anyPointer, anyHover 
+ */
+ @mixin anyPointer {
+    /* 
+        The any-pointer CSS media feature tests 
+        whether the user has any pointing device 
+        (such as a mouse) 
+    */
+    @media (any-pointer: fine) {
+        @content;
+    }
+}
+@mixin anyHover {
+    /* 
+        The any-hover CSS media feature can be used 
+        to test whether any available input 
+        mechanism can hover over elements
+    */
+    @media (any-hover: hover) {
+        @content;
+    }
+}
+
+/**
+ * small, large-up, large, xlarge 
+ */
+@mixin small {
+    @media (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+@mixin large-up {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+@mixin large {
+    @media (min-width: #{$desktop-width}) and (max-width: #{$largedesktop-width - 1px}) {
+        @content;
+    }
+}
+@mixin xlarge {
+    @media (min-width: #{$largedesktop-width}) {
+        @content;
+    }
+}
