@@ -1,5 +1,5 @@
 import gsap from 'gsap';
-import { lerp, getMousePosition } from './utils';
+import { getMousePosition } from './utils';
 
 // Track the mouse position
 let mouse = { x: 0, y: 0 };
@@ -56,7 +56,6 @@ export default class Cursor {
         this.renderedStyles['ty'].current = mouse.y - this.bounds.height / 2;
 
         for (const key in this.renderedStyles ) {
-            //this.renderedStyles[key].previous = lerp(this.renderedStyles[key].previous, this.renderedStyles[key].current, this.renderedStyles[key].amt);
             this.renderedStyles[key].previous = this.renderedStyles[key].current;
         }
 
