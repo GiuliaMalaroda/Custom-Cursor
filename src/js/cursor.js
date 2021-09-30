@@ -18,8 +18,8 @@ export default class Cursor {
         this.bounds = this.DOM.el.getBoundingClientRect();
 
         this.renderedStyles = {
-            tx: { previous: 0, current: 0, amt: 0.2 },
-            ty: { previous: 0, current: 0, amt: 0.2 }
+            tx: { previous: 0, current: 0 },
+            ty: { previous: 0, current: 0 }
         };
 
         this.onFirstMouseMove = () => {
@@ -64,7 +64,7 @@ export default class Cursor {
         requestAnimationFrame(() => this.render());
     }
 
-    onMouseEnter = () => this.DOM.el.classList.add("cursor--mousehover");
+    onMouseOver = () => this.DOM.el.classList.add("cursor--mousehover");
 
     onMouseLeave = () => this.DOM.el.classList.remove("cursor--mousehover");
 }
